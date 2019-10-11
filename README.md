@@ -1,5 +1,8 @@
 # The Elixir Cross Referencer
 
+This demand tag, and tag should be v1.0-rc1 format.
+Support lots of tags.
+
 
 Elixir is a source code cross-referencer inspired by
 [LXR](https://en.wikipedia.org/wiki/LXR_Cross_Referencer). It's written
