@@ -47,11 +47,6 @@ if m:
     version = m.group (2)
     cmd = m.group (3)
     arg = m.group (4)
-    if not (project and search ('^[A-Za-z0-9-]+$', project)) \
-    or not (version and search ('^[A-Za-z0-9._-]+$', version)):
-        status = 302
-        location = '/linux/latest/'+cmd+arg
-        cmd = ''
     if cmd == 'source':
         path = arg
         if len (path) > 0 and path[-1] == '/':

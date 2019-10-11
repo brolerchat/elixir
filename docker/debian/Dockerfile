@@ -41,11 +41,12 @@ RUN echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa && \
 
 RUN \
   mkdir /cgi-logs && \
+  chmod 777 /cgi-logs && \
   mkdir -p /srv/elixir-data/$PROJECT/repo && \
   mkdir -p /srv/elixir-data/$PROJECT/data && \
   git clone -b nebula-vbox "${GIT_REPO_URL}" /srv/elixir-data/$PROJECT/repo/ && \
   cd /srv/elixir-data/$PROJECT/repo/ && \ 
-  git tag xref
+  git tag v1.0-rc1
 
 ENV LXR_REPO_DIR /srv/elixir-data/$PROJECT/repo
 ENV LXR_DATA_DIR /srv/elixir-data/$PROJECT/data
