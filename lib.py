@@ -37,7 +37,8 @@ def script (*args):
 def scriptLines (*args):
     p = script (*args)
     p = p.split (b'\n')
-    del p[-1]
+    if len(p) > 1:
+        del p[-1]
     return p
 
 def unescape (bstr):
