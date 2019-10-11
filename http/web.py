@@ -30,7 +30,7 @@ def print (arg, end='\n'):
 
 # Enable CGI Trackback Manager for debugging (https://docs.python.org/fr/3/library/cgitb.html)
 import cgitb
-cgitb.enable()
+cgitb.enable(logdir="/cgi-logs")
 
 import cgi
 import os

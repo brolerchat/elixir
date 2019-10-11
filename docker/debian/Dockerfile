@@ -40,6 +40,7 @@ RUN echo "$SSH_PRIVATE_KEY" > /root/.ssh/id_rsa && \
 
 
 RUN \
+  mkdir /cgi-logs && \
   mkdir -p /srv/elixir-data/$PROJECT/repo && \
   mkdir -p /srv/elixir-data/$PROJECT/data && \
   git clone -b nebula-vbox "${GIT_REPO_URL}" /srv/elixir-data/$PROJECT/repo/ && \
